@@ -9,12 +9,24 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Blocked.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Blocked" startnode="1" creator="Twine" creator-version="2.7.0" format="Harlowe" format-version="3.3.6" ifid="69CC1217-712F-45AC-BE73-30C9402386C9" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="header" color="red"></tw-tag><tw-tag name="startup" color="green"></tw-tag><tw-tag name="footer" color="red"></tw-tag><tw-passagedata pid="1" name="Blocked" tags="" position="700,325" size="100,100">Why can&#39;t I  (link-reveal:&quot;*write*&quot;)+(t8n:&quot;dissolve&quot;)[ (well, obviously //I can write//, you can see that here)]? More specifically, why can&#39;t I write on the big project that [[I really want to work on]]?
+<tw-storydata name="Blocked" startnode="1" creator="Twine" creator-version="2.7.0" format="Harlowe" format-version="3.3.6" ifid="69CC1217-712F-45AC-BE73-30C9402386C9" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript">let imgBase = 'file:///Users/mbessey/Documents/Projects/Twines/blocked/'
+if (imgBase.at(-1) != '/') {
+  imgBase += '/'
+}
+if (location.origin=="file://") {
+  	const baseElem = document.createElement('base');
+  	baseElem.setAttribute('href', imgBase);
+	document.head.append(baseElem);
+}
+
+</script><tw-tag name="header" color="red"></tw-tag><tw-tag name="startup" color="green"></tw-tag><tw-tag name="footer" color="red"></tw-tag><tw-passagedata pid="1" name="Blocked" tags="" position="700,325" size="100,100">&lt;img src=&#39;blocked_writer.jpg&#39;&gt;
+Why can&#39;t I  (link-reveal:&quot;*write*&quot;)+(t8n:&quot;dissolve&quot;)[ (well, obviously //I can write//, you can see that here)]? More specifically, why can&#39;t I write on the big project that [[I really want to work on]]?
 
 Maybe it&#39;s just that I really want it to be good, and I can&#39;t bear the idea of making a bad version of the ideal thing that sits in my head.
 
 Or maybe it&#39;s that I&#39;ve &quot;used up&quot; all of my creativity on work, and have nothing left in the creative &quot;gas tank&quot;. (if: $inventory does not contain &quot;no tea&quot;)[
 Or maybe it&#39;s just that I have (transition-depart:&quot;blur&quot;)[[no tea]].]
+
 </tw-passagedata><tw-passagedata pid="2" name="I really want to work on" tags="" position="700,450" size="100,100">## What I really want to work on
 (text-style:&quot;condense&quot;)[&quot;I don&#39;t want to write, I want to //have written//&quot;
 --Douglas Adams, probably
@@ -68,7 +80,9 @@ I sometimes force myself to write with a [[pen]] and [[notebook]], in a similar 
 (if: $inventory is not (ds:))[You have:
 $inventory]</tw-passagedata><tw-passagedata pid="12" name="Scripting snippets" tags="" position="375,25" size="100,100">(set: $inventory to (ds:&quot;tea&quot;, &quot;pen&quot;, &quot;notebook&quot;, &quot;thermonuclear bomb&quot;))
 (if: $inventory is not empty)[you have: $inventory]
-(if: $inventory contains &quot;pen&quot; and it contains &quot;notebook&quot; and it contains &quot;tea&quot;)[got it]</tw-passagedata><tw-passagedata pid="13" name="tea" tags="" position="550,700" size="100,100">## Tea
+(if: $inventory contains &quot;pen&quot; and it contains &quot;notebook&quot; and it contains &quot;tea&quot;)[got it]
+(put: &quot;Mark&quot; into $name)
+$name</tw-passagedata><tw-passagedata pid="13" name="tea" tags="" position="550,700" size="100,100">## Tea
 &quot;You want the flavor of dried leaves, boiled in water?&quot;
 --Douglas Adams
 
